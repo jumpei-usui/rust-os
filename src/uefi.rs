@@ -1,12 +1,7 @@
 use core::ffi::c_void;
 
-#[repr(usize)]
-pub enum EfiStatus {
-    Success = 0,
-}
-
-#[repr(C)]
-pub struct EfiHandle(*const c_void);
+pub type EfiStatus = usize;
+pub type EfiHandle = *const c_void;
 
 #[repr(C)]
 struct EfiTableHeader {
